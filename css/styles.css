@@ -1,0 +1,162 @@
+body {
+  background-color: #f0f0f0;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.nav-link {
+  transition: all 0.5s ease; }
+  .nav-link:hover {
+    color: #0d6efd; }
+
+.formExtra__cart {
+  color: white;
+  margin-right: 30px;
+  transition: all 0.5s; }
+  .formExtra__cart:hover {
+    color: #0d6efd; }
+
+.formExtra__input {
+  border: none;
+  outline: none;
+  border-radius: 0px;
+  padding-left: 40px;
+  background-image: url(/assets/images/search.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position-y: center;
+  background-position-x: 10px;
+  background-color: #4e4a4a; }
+
+.footer {
+  width: 100%;
+  color: white;
+  background-color: #3a403c;
+  position: absolute;
+  left: 0; }
+  .footer__copy {
+    background-color: rgba(0, 0, 0, 0.2); }
+  .footer__cat__item {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s; }
+    .footer__cat__item:hover {
+      color: rgba(255, 255, 255, 0.4); }
+
+.slider {
+  margin-bottom: 100px; }
+  .slider__img {
+    width: 100%;
+    object-fit: cover;
+    height: 600px; }
+
+.productCard {
+  max-width: 350px;
+  transition: all 0.4s ease; }
+  .productCard__img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    display: flex;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .productCard__info {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 15px; }
+  .productCard__title {
+    margin-left: 5px; }
+
+.principalTitle {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .principalTitle h4 {
+    font-size: 45px;
+    text-transform: uppercase;
+    color: white; }
+
+.principalCard {
+  max-width: 250px;
+  max-height: 170px;
+  transition: all .8s ease; }
+  .principalCard a {
+    color: black;
+    text-decoration: none; }
+  .principalCard__img {
+    max-width: 30%;
+    display: flex;
+    margin: 0 auto; }
+  .principalCard__link {
+    text-align: center;
+    font-size: 15px; }
+  .principalCard:hover {
+    background-color: #0d6efd;
+    box-shadow: 0 0 10px #0d6efd, 0 0 20px #0d6efd;
+    transform: scale(0.7); }
+
+.cardCustom {
+  margin: 20px;
+  max-width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  background: var(--img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 3px 5px 5px rgba(3, 32, 51, 0.8);
+  overflow: hidden; }
+  .cardCustom__content {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    transition: .5s; }
+    .cardCustom__content a {
+      color: rgba(255, 255, 255, 0.8);
+      margin: 10px 0;
+      font-size: 40px;
+      text-decoration: none; }
+
+@media (hover: hover) {
+  .cardCustom__content {
+    opacity: 0; }
+    .cardCustom__content:hover {
+      opacity: 1; }
+  .productCard:hover {
+    transform: scale(1.05); } }
+
+@media (max-width: 576px) {
+  .principalTitle h4 {
+    font-size: 20px; }
+  .slider__img {
+    height: 400px; }
+  .principalCard__link {
+    font-size: 10px; }
+  .productCard {
+    display: flex;
+    margin: 0 auto; } }
+
+.formContact {
+  background-color: #fafafa;
+  border-radius: 5px;
+  padding: 30px; }
+
+.formContact__submit {
+  background: #3a95b4;
+  background: linear-gradient(90deg, #3a95b4 0%, #082950 100%, white 100%);
+  border: none;
+  outline: none;
+  transition: all 0.5s; }
+
+.formContact__submit:hover {
+  transform: scale(1.15); }
+
+.formContact__textarea {
+  resize: none; }

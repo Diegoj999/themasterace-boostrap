@@ -1,0 +1,22 @@
+{
+  "name": "themasterace-boostrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-sass": "node-sass --include-path scss ./scss/styles.scss ./css/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diegoj999/themasterace-boostrap.git"
+  },
+  "author": "Diego Jimenez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Diegoj999/themasterace-boostrap/issues"
+  },
+  "homepage": "https://github.com/Diegoj999/themasterace-boostrap#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.3"
+  }
+}

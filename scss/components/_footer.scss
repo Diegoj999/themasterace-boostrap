@@ -1,0 +1,22 @@
+.footer{
+    width: 100%;
+    color: white;
+    background-color: #3a403c;
+    position: absolute;
+    left: 0;
+
+    &__copy{
+        background-color: rgba(0, 0, 0, 0.2);   
+    }
+
+    &__cat__item{
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s; 
+
+        &:hover{
+            color: rgba(255, 255, 255, .4); 
+        }
+    }
+}
+
