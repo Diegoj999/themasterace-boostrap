@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://diegoj999.github.io/themasterace-boostrap/sitemap.xml
