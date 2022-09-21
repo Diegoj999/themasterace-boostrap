@@ -1,7 +1,9 @@
+
+
 .footer{
     width: 100%;
     color: white;
-    background-color: #3a403c;
+    background-color: $secondary;
     position: absolute;
     left: 0;
 
@@ -18,5 +20,31 @@
             color: rgba(255, 255, 255, .4); 
         }
     }
+}
+
+$iconSocialMedia: (
+    facebook: map-get($map: $redes, $key: 'facebook'),
+    twitter: $primary, 
+    google: map-get($map: $redes, $key: 'google'),
+    instagram: map-get($map: $redes, $key: 'instagram')
+);
+
+@each $nameSocialMedia,  $colorIcon in $iconSocialMedia {
+    .rs-#{$nameSocialMedia}{
+        background-color: $colorIcon;
+        border: none;
+        color: white;
+
+        &:hover{
+            background-color: $colorIcon;
+            opacity: 0.9;
+        }
+
+        &:focus{
+            background-color: $colorIcon;
+        }
+    }
+
+   
 }
 

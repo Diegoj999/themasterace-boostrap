@@ -16,8 +16,7 @@
         width: 100%;
         height: 250px;
         object-fit: contain;
-        display: flex;
-        margin: 0 auto;
+        @include flexCenterType(2);
         border-bottom: 1px solid rgba(0,0,0,0.1);
     }
 
@@ -33,18 +32,16 @@
 }
 
 
+
 .principalTitle{
     margin-top: 100px;
     margin-bottom: 50px;
     height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCenterType(1);
 
     & h4{
-        font-size: 45px;
+        @include fontColorWithSize(white, 45px);
         text-transform: uppercase;
-        color: white;
     }
 }
 
@@ -60,8 +57,7 @@
 
     &__img{
         max-width: 30%;
-        display: flex;
-        margin: 0 auto;   
+        @include flexCenterType(2)  
     }
 
     &__link{
@@ -70,8 +66,8 @@
     }
 
     &:hover{
-        background-color: #0d6efd;
-        box-shadow: 0 0 10px #0d6efd, 0 0 20px #0d6efd;
+        background-color: $primary;
+        box-shadow: 0 0 10px $primary, 0 0 20px $primary;
         transform: scale(0.7)
     }
 
@@ -92,22 +88,19 @@
     &__content{
         min-width: 100%;
         min-height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include flexCenterType(1);
         background: rgba(0, 0, 0, .4);
         transition: .5s;
 
         & a{
-            color: rgba(255, 255, 255, .8);
+            @include fontColorWithSize(#ffffffcc, 40px);
             margin: 10px 0;
             font-size: 40px;
             text-decoration: none;
         }
     }
   }
-  
+
   
   @media(hover:hover){
 

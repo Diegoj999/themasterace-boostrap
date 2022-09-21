@@ -5,3 +5,31 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
+@mixin fontColorWithSize($color, $size){
+    font-size: $size;
+    color: $color
+  }
+ 
+
+@mixin flexCenterType($number){
+    @if $number == 1 {
+        @extend .centerContent;
+    }
+    @else if $number == 2{
+        @extend .centerElementHorizontally;
+    }
+}
+
+.centerContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centerElementHorizontally{ 
+    display: flex;
+    margin: 0 auto; 
+}

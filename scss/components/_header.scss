@@ -2,7 +2,7 @@
     transition: all 0.5s ease;
 
     &:hover{
-        color: #0d6efd ;
+        color: $primary;
     }
 }
 
@@ -13,7 +13,7 @@
         transition: all 0.5s;
 
         &:hover{
-            color:#0d6efd;
+            color: $primary; 
         }
     }
 
@@ -22,12 +22,11 @@
         outline: none;
         border-radius: 0px;
         padding-left: 40px;
-        background-image: url(/assets/images/search.png);
+        background-image: url(../assets/images/search.png);
         background-repeat: no-repeat;
         background-size: 25px;
         background-position-y: center;
         background-position-x: 10px;
-        background-color: rgb(78, 74, 74);
+        background-color: $secondary; 
     }
-
 }

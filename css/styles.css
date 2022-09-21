@@ -5,6 +5,15 @@ body {
   padding: 0;
   box-sizing: border-box; }
 
+.centerContent, .principalTitle, .cardCustom__content {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.centerElementHorizontally, .productCard__img, .principalCard__img {
+  display: flex;
+  margin: 0 auto; }
+
 .nav-link {
   transition: all 0.5s ease; }
   .nav-link:hover {
@@ -22,7 +31,7 @@ body {
   outline: none;
   border-radius: 0px;
   padding-left: 40px;
-  background-image: url(/assets/images/search.png);
+  background-image: url(../assets/images/search.png);
   background-repeat: no-repeat;
   background-size: 25px;
   background-position-y: center;
@@ -32,7 +41,7 @@ body {
 .footer {
   width: 100%;
   color: white;
-  background-color: #3a403c;
+  background-color: #4e4a4a;
   position: absolute;
   left: 0; }
   .footer__copy {
@@ -43,6 +52,46 @@ body {
     transition: all 0.3s; }
     .footer__cat__item:hover {
       color: rgba(255, 255, 255, 0.4); }
+
+.rs-facebook {
+  background-color: #3b5998;
+  border: none;
+  color: white; }
+  .rs-facebook:hover {
+    background-color: #3b5998;
+    opacity: 0.9; }
+  .rs-facebook:focus {
+    background-color: #3b5998; }
+
+.rs-twitter {
+  background-color: #0d6efd;
+  border: none;
+  color: white; }
+  .rs-twitter:hover {
+    background-color: #0d6efd;
+    opacity: 0.9; }
+  .rs-twitter:focus {
+    background-color: #0d6efd; }
+
+.rs-google {
+  background-color: #dd4b39;
+  border: none;
+  color: white; }
+  .rs-google:hover {
+    background-color: #dd4b39;
+    opacity: 0.9; }
+  .rs-google:focus {
+    background-color: #dd4b39; }
+
+.rs-instagram {
+  background-color: #ac2bac;
+  border: none;
+  color: white; }
+  .rs-instagram:hover {
+    background-color: #ac2bac;
+    opacity: 0.9; }
+  .rs-instagram:focus {
+    background-color: #ac2bac; }
 
 .slider {
   margin-bottom: 100px; }
@@ -58,8 +107,6 @@ body {
     width: 100%;
     height: 250px;
     object-fit: contain;
-    display: flex;
-    margin: 0 auto;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   .productCard__info {
     font-size: 14px;
@@ -71,14 +118,11 @@ body {
 .principalTitle {
   margin-top: 100px;
   margin-bottom: 50px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  height: 100px; }
   .principalTitle h4 {
     font-size: 45px;
-    text-transform: uppercase;
-    color: white; }
+    color: white;
+    text-transform: uppercase; }
 
 .principalCard {
   max-width: 250px;
@@ -88,9 +132,7 @@ body {
     color: black;
     text-decoration: none; }
   .principalCard__img {
-    max-width: 30%;
-    display: flex;
-    margin: 0 auto; }
+    max-width: 30%; }
   .principalCard__link {
     text-align: center;
     font-size: 15px; }
@@ -112,14 +154,11 @@ body {
   .cardCustom__content {
     min-width: 100%;
     min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background: rgba(0, 0, 0, 0.4);
     transition: .5s; }
     .cardCustom__content a {
-      color: rgba(255, 255, 255, 0.8);
+      font-size: 40px;
+      color: #ffffffcc;
       margin: 10px 0;
       font-size: 40px;
       text-decoration: none; }
