@@ -4,16 +4,17 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-
       <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
 
-      <meta name="description" content="Encontrá en TheMasterace los componentes para tu PC al mejor precio, con la mejor atención al cliente">
+      <meta name="keywords" content="TheMasterace, Arma tu PC, Soporte, PC GAMER Ryzen 7" />
+
+      <meta name="description" content="Encontrá en TheMasterace los componentes para tu PC al mejor precio, con la mejor atención al cliente" />
 
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed&display=swap" rel="stylesheet" />
 
       <link rel="icon" type="image/icon" href="./assets/images/pc-icon.ico" />
       <link rel="stylesheet" href="./css/styles.css" />
@@ -21,8 +22,9 @@
       <title>TheMasterace los componentes para tu PC al mejor precio</title>
    </head>
    <body>
-      <section class="header">
-         <nav class="navbar bg-black navbar-dark navbar-expand-xl border-opacity-100 d-flex justify-content-lg-between ">
+      <!-- Header -->
+      <header class="header">
+         <nav class="navbar bg-black navbar-dark navbar-expand-xl border-opacity-100 d-flex justify-content-lg-between">
             <div class="container-fluid">
                <a class="navbar-brand mx-lg-5 fs-3" href="./index.html">THEMASTERACE</a>
                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,249 +63,251 @@
                </div>
             </div>
          </nav>
-      </section>
+      </header>
 
-      <section class="carousel slider">
-         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-indicators">
-               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <img src="./assets/images/slider1.webp" class="slider__img" alt="Compra mejores PC" />
-                  <div class="carousel-caption d-none d-md-block carousel-modifiers">
-                     <h5>Compra las PC mejores PC del mercado</h5>
-                     <p>Ofertas hasta 6 cuotas sin interes.</p>
-                  </div>
+      <!-- Main -->
+      <main>
+         <section class="carousel slider">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+               <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                </div>
-               <div class="carousel-item">
-                  <img src="./assets/images/slider2.webp" class="slider__img" alt="Slider 2" />
-                  <div class="carousel-caption d-none d-md-block">
-                     <h5>Second slide label</h5>
-                     <p>Some representative placeholder content for the second slide.</p>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <img src="./assets/images/slider3.webp" class="slider__img" alt="Slider 3" />
-                  <div class="carousel-caption d-none d-md-block">
-                     <h5>Third slide label</h5>
-                     <p>Some representative placeholder content for the third slide.</p>
-                  </div>
-               </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Next</span>
-            </button>
-         </div>
-      </section>
-
-      <div class="container">
-         <div class="row gap-5 justify-content-center">
-            <div class="col-6 col-md-3">
-               <div class="card principalCard">
-                  <a href="#">
-                     <div class="card-body">
-                        <img src="./assets/images/computadora.webp" class="principalCard__img" alt="Arma tu PC" />
-                        <h3 class="principalCard__link">Arma tu PC</h3>
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <img src="./assets/images/slider1.webp" class="slider__img" alt="Compra mejores PC" />
+                     <div class="carousel-caption d-none d-md-block carousel-modifiers">
+                        <h5>Compra las PC mejores PC del mercado</h5>
+                        <p>Ofertas hasta 6 cuotas sin interes.</p>
                      </div>
-                  </a>
-               </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-               <div class="card principalCard">
-                  <a href="#">
-                     <div class="card-body">
-                        <img src="./assets/images/soporte.webp" class="principalCard__img" alt="Soporte" />
-                        <h3 class="principalCard__link">Soporte</h3>
+                  </div>
+                  <div class="carousel-item">
+                     <img src="./assets/images/slider3.webp" class="slider__img" alt="Slider 2" />
+                     <div class="carousel-caption d-none d-md-block">
+                        <h5>Querés una MAC?</h5>
+                        <a class="text-decoration-none" href="#" style="color: white;">Ver más</a>
                      </div>
-                  </a>
+                  </div>
+               </div>
+               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+               </button>
+               <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+               </button>
+            </div>
+         </section>
+
+         <div class="container">
+            <div class="row gap-5 justify-content-center">
+               <div class="col-6 col-md-3">
+                  <div class="card principalCard">
+                     <a href="#">
+                        <div class="card-body">
+                           <img src="./assets/images/computadora.webp" class="principalCard__img" alt="Arma tu PC" />
+                           <h3 class="principalCard__link">Arma tu PC</h3>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+
+               <div class="col-6 col-md-3">
+                  <div class="card principalCard" id="pCard">
+                     <a href="#">
+                        <div class="card-body">
+                           <img src="./assets/images/soporte.webp" class="principalCard__img" alt="Soporte" />
+                           <h3 class="principalCard__link">Soporte</h3>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+
+               <div class="col-6 col-md-3 m-col">
+                  <div class="card principalCard">
+                     <a href="#">
+                        <div class="card-body">
+                           <img src="./assets/images/preguntas.webp" class="principalCard__img" alt="Preguntas" />
+                           <h3 class="principalCard__link">Preguntas</h3>
+                        </div>
+                     </a>
+                  </div>
                </div>
             </div>
+         </div>
 
-            <div class="col-6 col-md-3 m-col">
-               <div class="card principalCard">
-                  <a href="#">
+         <div class="container bg-dark principalTitle">
+            <h4>Productos Destacados</h4>
+         </div>
+
+         <div class="container">
+            <div class="row gap-5 justify-content-between">
+               <div class="col-sm-12 col-md-5 col-lg-5 col-xl-3">
+                  <div class="card productCard">
+                     <img src="./assets/images/pc.webp" class="productCard__img" alt="PC GAMER Ryzen 7" />
                      <div class="card-body">
-                        <img src="./assets/images/preguntas.webp" class="principalCard__img" alt="Preguntas" />
-                        <h3 class="principalCard__link">Preguntas</h3>
+                        <h5 class="fs-3 productCard__title">$299.999</h5>
+                        <p class="card-text productCard__info">Pc Armada Gamer Amd Ryzen 7 5700g Ram 32gb 960g Ssd Wifi</p>
+                        <a href="#" class="btn btn-primary btn btn-primary d-block mx-auto">Ver Más</a>
                      </div>
-                  </a>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <div class="container bg-dark principalTitle">
-         <h4>Productos Destacados</h4>
-      </div>
-
-      <div class="container">
-         <div class="row gap-5 justify-content-between">
-            <div class="col-sm-12 col-md-5 col-lg-3">
-               <div class="card shadow productCard">
-                  <img src="./assets/images/pc.webp" class="productCard__img" alt="PC GAMER Ryzen 7" />
-                  <div class="card-body">
-                     <h5 class="fs-3 productCard__title">$299.999</h5>
-                     <p class="card-text productCard__info">Pc Armada Gamer Amd Ryzen 7 5700g Ram 32gb 960g Ssd Wifi</p>
-                     <a href="#" class="btn btn-primary btn btn-primary d-block mx-auto">Ver Más</a>
                   </div>
                </div>
-            </div>
 
-            <div class="col-sm-12 col-md-5 col-lg-3">
-               <div class="card shadow productCard">
-                  <img src="./assets/images/pc.webp" class="productCard__img" alt="PC GAMER Ryzen 7" />
-                  <div class="card-body">
-                     <h5 class="fs-3 productCard__title">$299.999</h5>
-                     <p class="card-text productCard__info">Pc Armada Gamer Amd Ryzen 7 5700g Ram 32gb 960g Ssd Wifi</p>
-                     <a href="#" class="btn btn-primary btn btn-primary d-block mx-auto">Ver Más</a>
+               <div class="col-sm-12 col-md-5 col-lg-5 col-xl-3">
+                  <div class="card productCard">
+                     <img src="../assets/images/notebook.webp" class="productCard__img" alt="Notebook ASUS" />
+                     <div class="card-body">
+                        <h5 class="fs-3 productCard__title">$109.999</h5>
+                        <p class="card-text productCard__info">Notebook ASUS X515EA 15,6" FHD Core I3 4GB SSD 256GB Windows 11</p>
+                        <a href="#" class="btn btn-primary btn btn-primary d-block mx-auto">Ver Más</a>
+                     </div>
                   </div>
                </div>
-            </div>
 
-            <div class="col-sm-12 col-md-5 col-lg-3">
-               <div class="card shadow productCard">
-                  <img src="./assets/images/pc.webp" class="productCard__img" alt="PC GAMER Ryzen 7" />
-                  <div class="card-body">
-                     <h5 class="fs-3 productCard__title">$299.999</h5>
-                     <p class="card-text productCard__info">Pc Armada Gamer Amd Ryzen 7 5700g Ram 32gb 960g Ssd Wifi</p>
-                     <a href="#" class="btn btn-primary btn btn-primary d-block mx-auto">Ver Más</a>
+               <div class="col-sm-12 col-md-5 col-lg-5 col-xl-3">
+                  <div class="card productCard">
+                     <img src="../assets/images/componente1.webp" class="productCard__img" alt="Placa GTX 1660 SUPER" />
+                     <div class="card-body">
+                        <h5 class="fs-3 productCard__title">$80.000</h5>
+                        <p class="card-text productCard__info">Placa de video Nvidia Gigabyte GeForce GTX 1660 SUPER</p>
+                        <a href="#" class="btn btn-primary btn btn-primary d-block mx-auto">Ver Más</a>
+                     </div>
                   </div>
                </div>
-            </div>
 
-            <div class="col-sm-12 col-md-5 col-lg-3">
-               <div class="card shadow productCard">
-                  <img src="./assets/images/pc.webp" class="productCard__img" alt="PC GAMER Ryzen 7" />
-                  <div class="card-body">
-                     <h5 class="fs-3 productCard__title">$299.999</h5>
-                     <p class="card-text productCard__info">Pc Armada Gamer Amd Ryzen 7 5700g Ram 32gb 960g Ssd Wifi</p>
-                     <a href="#" class="btn btn-primary btn btn-primary d-block mx-auto">Ver Más</a>
+               <div class="col-sm-12 col-md-5 col-lg-5 col-xl-3">
+                  <div class="card productCard">
+                     <img src="./assets/images/pc.webp" class="productCard__img" alt="PC GAMER Ryzen 7" />
+                     <div class="card-body">
+                        <h5 class="fs-3 productCard__title">$299.999</h5>
+                        <p class="card-text productCard__info">Pc Armada Gamer Amd Ryzen 7 5700g Ram 32gb 960g Ssd Wifi</p>
+                        <a href="#" class="btn btn-primary btn btn-primary d-block mx-auto">Ver Más</a>
+                     </div>
                   </div>
                </div>
-            </div>
 
-            <div class="col-sm-12 col-md-5 col-lg-3">
-               <div class="card shadow productCard">
-                  <img src="./assets/images/pc.webp" class="productCard__img" alt="PC GAMER Ryzen 7" />
-                  <div class="card-body">
-                     <h5 class="fs-3 productCard__title">$299.999</h5>
-                     <p class="card-text productCard__info">Pc Armada Gamer Amd Ryzen 7 5700g Ram 32gb 960g Ssd Wifi</p>
-                     <a href="#" class="btn btn-primary btn btn-primary d-block mx-auto">Ver Más</a>
+               <div class="col-sm-12 col-md-5 col-lg-5 col-xl-3">
+                  <div class="card productCard">
+                     <img src="../assets/images/notebook.webp" class="productCard__img" alt="Notebook ASUS" />
+                     <div class="card-body">
+                        <h5 class="fs-3 productCard__title">$109.999</h5>
+                        <p class="card-text productCard__info">Notebook ASUS X515EA 15,6" FHD Core I3 4GB SSD 256GB Windows 11</p>
+                        <a href="#" class="btn btn-primary btn btn-primary d-block mx-auto">Ver Más</a>
+                     </div>
                   </div>
                </div>
-            </div>
 
-            <div class="col-sm-12 col-md-5 col-lg-3">
-               <div class="card shadow productCard">
-                  <img src="./assets/images/pc.webp" class="productCard__img" alt="PC GAMER Ryzen 7" />
-                  <div class="card-body">
-                     <h5 class="fs-3 productCard__title">$299.999</h5>
-                     <p class="card-text productCard__info">Pc Armada Gamer Amd Ryzen 7 5700g Ram 32gb 960g Ssd Wifi</p>
-                     <a href="#" class="btn btn-primary btn btn-primary d-block mx-auto">Ver Más</a>
+               <div class="col-sm-12 col-md-5 col-lg-5 col-xl-3">
+                  <div class="card productCard">
+                     <img src="../assets/images/componente1.webp" class="productCard__img" alt="Placa GTX 1660 SUPER" />
+                     <div class="card-body">
+                        <h5 class="fs-3 productCard__title">$80.000</h5>
+                        <p class="card-text productCard__info">Placa de video Nvidia Gigabyte GeForce GTX 1660 SUPER</p>
+                        <a href="#" class="btn btn-primary btn btn-primary d-block mx-auto">Ver Más</a>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
-      </div>
 
-      <div class="container bg-dark principalTitle">
-         <h4>Personalizaciones</h4>
-      </div>
-
-      <div class="container">
-         <div class="cardCustom" style="--img: url(../assets/images/design.webp);">
-            <div class="cardCustom__content">
-               <a href="#">PC DESIGN</a>
-            </div>
+         <div class="container bg-dark principalTitle">
+            <h4>Personalizaciones</h4>
          </div>
 
-         <div class="cardCustom" style="--img: url(../assets/images/gaming.webp);">
-            <div class="cardCustom__content">
-               <a href="#">PC GAMING</a>
+         <div class="container">
+            <div class="cardCustom" style="--img: url(../assets/images/design.webp);">
+               <div class="cardCustom__content">
+                  <a href="#">PC DESIGN</a>
+               </div>
             </div>
-         </div>
 
-         <div class="cardCustom" style="--img: url(../assets/images/rig.webp);">
-            <div class="cardCustom__content">
-               <a href="#">RIGs</a>
+            <div class="cardCustom" style="--img: url(../assets/images/gaming.webp);">
+               <div class="cardCustom__content">
+                  <a href="#">PC GAMING</a>
+               </div>
+            </div>
+
+            <div class="cardCustom" style="--img: url(../assets/images/rig.webp);">
+               <div class="cardCustom__content">
+                  <a href="#">RIGs</a>
+               </div>
             </div>
          </div>
-      </div>
+      </main>
 
       <!-- Footer -->
       <footer class="text-center text-lg-start text-white mt-5 footer">
          <div class="container p-4 pb-0">
             <section class="">
                <div class="row">
-                  <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                     <h6 class="text-uppercase mb-4 font-weight-bold">
-                        ACERCA DE
-                     </h6>
+                  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                     <h6 class="text-uppercase mb-3 font-weight-bold footer__cat">INFORMACION</h6>
                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <a href="#" class="footer__cat__item">Nosotros</a>
+                     </p>
+                     <p>
+                        <a href="#" class="footer__cat__item">FAQ</a>
+                     </p>
+                     <p>
+                        <a href="#" class="footer__cat__item">Devoluciones</a>
                      </p>
                   </div>
+
+                  <hr class="w-100 clearfix d-md-none" />
 
                   <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                     <h6 class="text-uppercase mb-4 font-weight-bold">Categorias</h6>
+                     <h6 class="text-uppercase mb-3 font-weight-bold footer__cat">Categorias</h6>
                      <p>
-                        <a href="#" class="footer__cat__item">Computadoras</a>
+                        <a href="./pages/computadoras.html" class="footer__cat__item">Computadoras</a>
                      </p>
                      <p>
-                        <a href="#" class="footer__cat__item">Notebooks</a>
+                        <a href="./pages/notebooks.html" class="footer__cat__item">Notebooks</a>
                      </p>
                      <p>
-                        <a href="#" class="footer__cat__item">Componentes</a>
+                        <a href="./pages/componentes.html" class="footer__cat__item">Componentes</a>
                      </p>
                   </div>
 
                   <hr class="w-100 clearfix d-md-none" />
 
-                  <hr class="w-100 clearfix d-md-none" />
-
-                  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                     <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
-                     <p><i class="fas fa-home mr-3"></i> Calle 5xx al 2000</p>
-                     <p><i class="fas fa-envelope mr-3"></i> test@gmail.com</p>
-                     <p><i class="fas fa-phone mr-3"></i> + 54 111 111 111</p>
+                  <div class="col-md-4 col-lg-3 col-xl-2 mx-auto mt-3">
+                     <h6 class="text-uppercase mb-3 font-weight-bold footer__cat">Contacto</h6>
+                     <p>
+                        <a class="footer__cat__item" href="./pages/contacto.html"><i class="fas fa-home mr-3"></i> Sucursales</a>
+                     </p>
+                     <p>
+                        <a class="footer__cat__item" href="./pages/contacto.html"><i class="fas fa-envelope mr-3"></i> Correo </a>
+                     </p>
+                     <p>
+                        <a class="footer__cat__item" href="./pages/contacto.html"><i class="fas fa-phone mr-3"></i> Telefonos</a>
+                     </p>
                   </div>
 
-                  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                     <h6 class="text-uppercase mb-4 font-weight-bold">SEGUINOS</h6>
+                  <hr class="w-100 clearfix d-md-none" />
+
+                  <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                     <h6 class="text-uppercase mb-4 font-weight-bold footer_cat">SEGUINOS</h6>
 
                      <!-- Facebook -->
-                     <a class="btn  m-1 rs-facebook" href="#" role="button"><i class="fab fa-facebook-f"></i></a>
+                     <a class="btn m-1 mx-2 rs-facebook" href="#" role="button"><i class="fab fa-facebook-f"></i></a>
 
                      <!-- Twitter -->
-                     <a class="btn  m-1 rs-twitter" href="#" role="button"><i class="fab fa-twitter"></i></a>
-
-                     <!-- Google -->
-                     <a class="btn  m-1 rs-google" href="#" role="button"><i class="fab fa-google"></i></a>
+                     <a class="btn m-1 mx-2 rs-twitter" href="#" role="button"><i class="fab fa-twitter"></i></a>
 
                      <!-- Instagram -->
-                     <a class="btn  m-1 rs-instagram" href="#" role="button"><i class="fab fa-instagram"></i></a>
-  
+                     <a class="btn m-1 mx-2 rs-instagram" href="#" role="button"><i class="fab fa-instagram"></i></a>
                   </div>
                </div>
             </section>
+            <hr class="w-100 clearfix" />
          </div>
 
          <div class="text-center p-3 footer__copy">&copy; 2022 <b>THEMASTERACE</b> - Todos los Derechos Reservados.</div>
       </footer>
 
-      
       <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-
-   </body> 
+   </body>
 </html>

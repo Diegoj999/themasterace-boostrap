@@ -3,24 +3,32 @@
 .footer{
     width: 100%;
     color: white;
-    background-color: $secondary;
+    background-color: black;
     position: absolute;
     left: 0;
+    font-family: 'Roboto Condensed', sans-serif;
 
     &__copy{
         background-color: rgba(0, 0, 0, 0.2);   
     }
 
-    &__cat__item{
-        text-decoration: none;
-        color: inherit;
-        transition: all 0.3s; 
+    &__cat{
+        font-size: 20px;
 
-        &:hover{
-            color: rgba(255, 255, 255, .4); 
+        &__item{
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s; 
+    
+            &:hover{
+                color: $primary;
+            }
         }
     }
+
 }
+
+
 
 $iconSocialMedia: (
     facebook: map-get($map: $redes, $key: 'facebook'),
@@ -45,6 +53,7 @@ $iconSocialMedia: (
         }
     }
 
-   
+    
 }
+
 

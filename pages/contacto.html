@@ -5,23 +5,24 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
 
-      <meta name="description" content="Encontrá en TheMasterace los componentes para tu PC al mejor precio, con la mejor atención al cliente">
+      <meta name="description" content="Encontrá en TheMasterace los componentes para tu PC al mejor precio, con la mejor atención al cliente" />
 
-      <meta name="keywords" content="TheMasterace, Arma tu PC, Soporte, PC GAMER Ryzen 7"/>
+      <meta name="keywords" content="TheMasterace, Arma tu PC, Soporte, PC GAMER Ryzen 7" />
 
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed&display=swap" rel="stylesheet" />
 
       <link rel="icon" type="image/icon" href="../assets/images/pc-icon.ico" />
       <link rel="stylesheet" href="../css/styles.css" />
 
       <title>Contacto - TheMasterace</title>
    </head>
-   <body style="background: rgb(58, 149, 180); background: linear-gradient(90deg, rgba(58, 149, 180, 1) 0%, rgba(8, 41, 80, 1) 100%, rgba(255, 255, 255, 1) 100%);">
-      <section>
+   <body>
+      <!-- Header -->
+      <header>
          <nav class="navbar bg-black navbar-dark navbar-expand-xl border-opacity-100 d-flex justify-content-lg-between">
             <div class="container-fluid">
                <a class="navbar-brand mx-lg-5 fs-3" href="../index.html">THEMASTERACE</a>
@@ -61,95 +62,132 @@
                </div>
             </div>
          </nav>
-      </section>
-      <main>
-         <h1 class="text-center my-5 text-white">Contacto</h1>
-         <form>
-            <div class="container my-5 col-10 col-sm-6 col-md-7 col-lg-4 formContact shadow">
-               <div class="mb-5">
-                  <label for="form-name" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="form-name" placeholder="Escribe tu nombre.." required />
-               </div>
-               <div class="mb-5">
-                  <label for="form-email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="form-email" placeholder="Escribe tu Email.." required />
-               </div>
+      </header>
 
-               <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                  <textarea class="form-control formContact__textarea" id="exampleFormControlTextarea1" rows="3" placeholder="Deja tu mensaje.." required></textarea>
-               </div>
-               <div class="d-flex justify-content-center align-items-center">
-                  <button type="submit" class="btn btn-lg text-white my-4 formContact__submit">Enviar</button>
+      <!-- Main -->
+      <main>
+         <div class="container bg-dark principalTitle">
+            <h4>Contacto</h4>
+         </div>
+         <div class="container">
+            <div class="row gap-2">
+               <form class="container my-4 col-10 col-md-6 formContact">
+                  <div class="mb-5">
+                     <label for="form-name" class="form-label">Nombre</label>
+                     <input type="text" class="form-control formContact__input" id="form-name" required />
+                  </div>
+                  <div class="mb-5">
+                     <label for="form-email" class="form-label">Email</label>
+                     <input type="email" class="form-control formContact__input" id="form-email" required />
+                  </div>
+
+                  <div class="mb-5">
+                     <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                     <textarea class="form-control formContact__textarea" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required />
+                     <label class="form-check-label" for="defaultCheck1">
+                        Recibir ofertas de TheMasterace
+                     </label>
+                  </div>
+
+                  <div class="d-flex">
+                     <button type="submit" class="btn btn-lg text-white my-4 formContact__submit">Enviar</button>
+                  </div>
+               </form>
+
+               <div class="container my-5 col-12 col-md-5">
+                  <iframe
+                     class="googlemap"
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15574.634174266253!2d-58.1814327229608!3d-34.85211857964218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2d8053e06c501%3A0xfdb78511c095bb9e!2sParque%20Pereyra%20Iraola!5e0!3m2!1ses-419!2sar!4v1664067652072!5m2!1ses-419!2sar"
+                     width="600"
+                     height="450"
+                     style="border: 0;"
+                     allowfullscreen=""
+                     loading="lazy"
+                     referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                  <h4 class="googlemap__text">Sucursal: Parque Pereyra Iraola, Buenos Aires</h4>
+                  <h4 class="googlemap__text">Email: Diegoj9999@gmail.com</h4>
+                  <h4 class="googlemap__text">Whatsapp: +54 011 12345678</h4>
                </div>
             </div>
-         </form>
+         </div>
       </main>
 
       <!-- Footer -->
       <footer class="text-center text-lg-start text-white mt-5 footer">
-        <div class="container p-4 pb-0">
-           <section class="">
-              <div class="row">
-                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">
-                       ACERCA DE
-                    </h6>
-                    <p>
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                 </div>
+         <div class="container p-4 pb-0">
+            <section class="">
+               <div class="row">
+                  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                     <h6 class="text-uppercase mb-3 font-weight-bold footer__cat">INFORMACION</h6>
+                     <p>
+                        <a href="#" class="footer__cat__item">Nosotros</a>
+                     </p>
+                     <p>
+                        <a href="#" class="footer__cat__item">FAQ</a>
+                     </p>
+                     <p>
+                        <a href="#" class="footer__cat__item">Devoluciones</a>
+                     </p>
+                  </div>
 
-                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Categorias</h6>
-                    <p>
-                       <a href="#" class="footer__cat__item">Computadoras</a>
-                    </p>
-                    <p>
-                       <a href="#" class="footer__cat__item">Notebooks</a>
-                    </p>
-                    <p>
-                       <a href="#" class="footer__cat__item">Componentes</a>
-                    </p>
-                 </div>
+                  <hr class="w-100 clearfix d-md-none" />
 
-                 <hr class="w-100 clearfix d-md-none" />
+                  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                     <h6 class="text-uppercase mb-3 font-weight-bold footer__cat">Categorias</h6>
+                     <p>
+                        <a href="../pages/computadoras.html" class="footer__cat__item">Computadoras</a>
+                     </p>
+                     <p>
+                        <a href="../pages/notebooks.html" class="footer__cat__item">Notebooks</a>
+                     </p>
+                     <p>
+                        <a href="../pages/componentes.html" class="footer__cat__item">Componentes</a>
+                     </p>
+                  </div>
 
-                 <hr class="w-100 clearfix d-md-none" />
+                  <hr class="w-100 clearfix d-md-none" />
 
-                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
-                    <p><i class="fas fa-home mr-3"></i> Calle 5xx al 2000</p>
-                    <p><i class="fas fa-envelope mr-3"></i> test@gmail.com</p>
-                    <p><i class="fas fa-phone mr-3"></i> + 54 111 111 111</p>
-                 </div>
+                  <div class="col-md-4 col-lg-3 col-xl-2 mx-auto mt-3">
+                     <h6 class="text-uppercase mb-3 font-weight-bold footer__cat">Contacto</h6>
+                     <p>
+                        <a class="footer__cat__item" href="../pages/contacto.html"><i class="fas fa-home mr-3"></i> Sucursales</a>
+                     </p>
+                     <p>
+                        <a class="footer__cat__item" href="../pages/contacto.html"><i class="fas fa-envelope mr-3"></i> Correo </a>
+                     </p>
+                     <p>
+                        <a class="footer__cat__item" href="../pages/contacto.html"><i class="fas fa-phone mr-3"></i> Telefonos</a>
+                     </p>
+                  </div>
 
-                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">SEGUINOS</h6>
+                  <hr class="w-100 clearfix d-md-none" />
 
-                   <!-- Facebook -->
-                   <a class="btn  m-1 rs-facebook" href="#" role="button"><i class="fab fa-facebook-f"></i></a>
+                  <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                     <h6 class="text-uppercase mb-4 font-weight-bold footer__cat">SEGUINOS</h6>
 
-                   <!-- Twitter -->
-                   <a class="btn btn-floating m-1 rs-twitter" href="#" role="button"><i class="fab fa-twitter"></i></a>
+                     <!-- Facebook -->
+                     <a class="btn m-1 mx-2 rs-facebook" href="#" role="button"><i class="fab fa-facebook-f"></i></a>
 
-                   <!-- Google -->
-                   <a class="btn btn-floating m-1 rs-google" href="#" role="button"><i class="fab fa-google"></i></a>
+                     <!-- Twitter -->
+                     <a class="btn m-1 mx-2 rs-twitter" href="#" role="button"><i class="fab fa-twitter"></i></a>
 
-                   <!-- Instagram -->
-                   <a class="btn btn-floating m-1 rs-instagram" href="#" role="button"><i class="fab fa-instagram"></i></a>
+                     <!-- Instagram -->
+                     <a class="btn m-1 mx-2 rs-instagram" href="#" role="button"><i class="fab fa-instagram"></i></a>
+                  </div>
+               </div>
+            </section>
+            <hr class="w-100 clearfix" />
+         </div>
 
-                 </div>
-              </div>
-           </section>
-        </div>
+         <div class="text-center p-3 footer__copy">&copy; 2022 <b>THEMASTERACE</b> - Todos los Derechos Reservados.</div>
+      </footer>
 
-        <div class="text-center p-3 footer__copy">&copy; 2022 <b>THEMASTERACE</b> - Todos los Derechos Reservados.</div>
-     </footer>
+      <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 
-     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
-
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
    </body>
 </html>

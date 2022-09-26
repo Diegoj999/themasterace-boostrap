@@ -41,17 +41,20 @@ body {
 .footer {
   width: 100%;
   color: white;
-  background-color: #4e4a4a;
+  background-color: black;
   position: absolute;
-  left: 0; }
+  left: 0;
+  font-family: 'Roboto Condensed', sans-serif; }
   .footer__copy {
     background-color: rgba(0, 0, 0, 0.2); }
-  .footer__cat__item {
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s; }
-    .footer__cat__item:hover {
-      color: rgba(255, 255, 255, 0.4); }
+  .footer__cat {
+    font-size: 20px; }
+    .footer__cat__item {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s; }
+      .footer__cat__item:hover {
+        color: #0d6efd; }
 
 .rs-facebook {
   background-color: #3b5998;
@@ -114,6 +117,8 @@ body {
     margin-left: 15px; }
   .productCard__title {
     margin-left: 5px; }
+  .productCard:hover {
+    box-shadow: -1px 2px 7px 2px #0d6efd; }
 
 .principalTitle {
   margin-top: 100px;
@@ -167,9 +172,7 @@ body {
   .cardCustom__content {
     opacity: 0; }
     .cardCustom__content:hover {
-      opacity: 1; }
-  .productCard:hover {
-    transform: scale(1.05); } }
+      opacity: 1; } }
 
 @media (max-width: 576px) {
   .principalTitle h4 {
@@ -183,19 +186,28 @@ body {
     margin: 0 auto; } }
 
 .formContact {
-  background-color: #fafafa;
-  border-radius: 5px;
   padding: 30px; }
 
 .formContact__submit {
-  background: #3a95b4;
-  background: linear-gradient(90deg, #3a95b4 0%, #082950 100%, white 100%);
+  background-color: black;
   border: none;
-  outline: none;
-  transition: all 0.5s; }
+  outline: none; }
 
 .formContact__submit:hover {
-  transform: scale(1.15); }
+  background-color: #0d6efd; }
+
+.formContact__input {
+  border-radius: 0px;
+  color: white;
+  background-color: #4e4a4a; }
+
+.googlemap {
+  width: 100%; }
+  .googlemap__text {
+    font-weight: bold;
+    font-size: 15px; }
 
 .formContact__textarea {
-  resize: none; }
+  border-radius: 0px;
+  resize: none;
+  background-color: #4e4a4a; }
