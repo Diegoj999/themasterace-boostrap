@@ -1,23 +1,30 @@
 .formContact{
     padding: 30px;
+
+    &__submit{
+        background-color: black;
+        border:none;
+        outline: none;
+
+        &:hover{
+            background-color: $primary;
+        }
+    }
+
+    &__input{
+        border-radius: 0px;
+        color: white;
+        background-color: $secondary;
+    }
+
+    &____textarea{
+        border-radius: 0px;
+        resize: none;
+        background-color: $secondary;
+    }
+
 }
 
-.formContact__submit{
-    background-color: black;
-    border:none;
-    outline: none;
-}
-
-.formContact__submit:hover{
-    background-color: $primary;
-}
-
-
-.formContact__input{
-    border-radius: 0px;
-    color: white;
-    background-color: $secondary;
-}
 .googlemap{
     width: 100%;
 
@@ -25,13 +32,4 @@
         font-weight: bold;
         font-size: 15px;
     }
-}
-
-
-
-
-.formContact__textarea{
-    border-radius: 0px;
-    resize: none;
-    background-color: $secondary;
 }
