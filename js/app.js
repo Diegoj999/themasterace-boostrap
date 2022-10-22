@@ -52,7 +52,7 @@ function comprarPC(){
 
             default: console.log("PC inexistente");
      }
-     seguirComprando = confirm(`¿Desea seguir comprando? PRESUPUESTO: $${presupuesto} \n Escribe Si, si está de acuerdo, cualquier cosa en caso contrario`);
+     seguirComprando = confirm(`¿Desea seguir comprando? PRESUPUESTO: $${presupuesto}`);
     } 
 }
 
