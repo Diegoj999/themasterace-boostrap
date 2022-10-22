@@ -23,9 +23,20 @@ body {
 .formExtra__cart {
   color: white;
   margin-right: 30px;
-  transition: all 0.5s; }
-  .formExtra__cart:hover {
-    color: #0d6efd; }
+  position: relative; }
+
+.formExtra__numProduct {
+  color: #0d6efd;
+  position: absolute;
+  top: -11px;
+  right: -0px;
+  padding: 1px 6px;
+  border-radius: 50%;
+  color: white;
+  background-color: #087abd;
+  font-weight: 700;
+  font-family: system-ui;
+  line-height: 18px; }
 
 .formExtra__input {
   border: none;
@@ -116,6 +127,8 @@ body {
     font-size: 14px;
     font-weight: bold;
     margin-left: 15px; }
+  .productCard__btn {
+    width: 100%; }
   .productCard__title {
     margin-left: 5px; }
   .productCard:hover {
@@ -186,29 +199,33 @@ body {
     display: flex;
     margin: 0 auto; } }
 
+.carrito {
+  margin-top: 100px;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px; }
+
 .formContact {
   padding: 30px; }
-
-.formContact__submit {
-  background-color: black;
-  border: none;
-  outline: none; }
-
-.formContact__submit:hover {
-  background-color: #0d6efd; }
-
-.formContact__input {
-  border-radius: 0px;
-  color: white;
-  background-color: #4e4a4a; }
+  .formContact__submit {
+    background-color: black;
+    border: none;
+    outline: none; }
+    .formContact__submit:hover {
+      background-color: #0d6efd; }
+  .formContact__input {
+    border-radius: 0px;
+    color: white;
+    background-color: #4e4a4a; }
+  .formContact__textarea {
+    border-radius: 0px;
+    resize: none;
+    background-color: #4e4a4a; }
 
 .googlemap {
   width: 100%; }
   .googlemap__text {
     font-weight: bold;
     font-size: 15px; }
-
-.formContact__textarea {
-  border-radius: 0px;
-  resize: none;
-  background-color: #4e4a4a; }

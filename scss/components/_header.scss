@@ -7,15 +7,29 @@
 }
 
 .formExtra{
+
     &__cart{
         color: white;
         margin-right:30px;
-        transition: all 0.5s;
+        position: relative;
 
-        &:hover{
-            color: $primary; 
-        }
+    } 
+
+    &__numProduct{
+        color: $primary;
+        position: absolute;
+        top: -11px;
+        right: -0px;
+        padding: 1px 6px;
+        border-radius: 50%;
+        color: white;
+        background-color: rgb(8, 122, 189);;
+        font-weight: 700;
+        font-family: system-ui;
+        line-height: 18px;
+         
     }
+
 
     &__input{
         border: none;
