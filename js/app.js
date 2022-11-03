@@ -38,7 +38,7 @@ const pedirProducto = ()=>{
 
         esProductoValido = producto=="PC" || producto=="NOTEBOOK" || producto=="COMPONENTE";
     }
-    while(!esProductoValido || esProductoValido==null)
+    while(!esProductoValido)
 
     const productosFiltrados = productos.filter(pr => pr.tipo.toUpperCase() === producto);
     const nombreProductos = productosFiltrados.map((pr, id) => `${id+1}. ${pr.nombre} $${puntoEnMiles(pr.precio)}`);
