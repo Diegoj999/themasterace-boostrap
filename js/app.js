@@ -1,74 +1,73 @@
-const PRIMERPC = 250000;
-const SEGUNDAPC = 109000;
-const TERCERAPC = 300000;
-let consumo = 0;
+let productos = [
+    {nombre: "PC GAMER Ryzen 7 RTX 3060Ti", precio: 299999, tipo: "PC"},
+    {nombre: "Notebook ASUS i7 16GB RAM RTX 2060", precio: 149999, tipo:"notebook"},
+    {nombre: "Placa de video RTX 3070ti 10GB", precio: 169999, tipo: "componente" },
+    {nombre: "Placa de video RTX 3060ti 8GB", precio: 129999, tipo: "componente" },
+    {nombre: "Placa de video RTX 3080ti 12GB", precio: 299999, tipo: "componente" },
+    {nombre: "Disco sólido interno WD 500GB", precio: 12000, tipo: "componente" }, 
+    {nombre: "Notebook Gamer ASUS AMD Ryzen 6800H 16 GB RTX 3060", precio: 500000, tipo: "notebook" }
 
-let nombre = prompt("Ingrese su nombre");
-let presupuesto = parseInt(prompt("Ingrese su presupuesto"));
+]
 
-let seguirComprando = true;
+let presupuestoTotal = parseInt(prompt("¿Cual es tu presupuesto?"));
+let gastoTotal = 0;
+presupuestoTotal = Number.isNaN(presupuestoTotal) ? 0 : presupuestoTotal;  
 
-function comprarPC(){
+
+const elegirProductos = () =>{
+ 
+    let seguirComprando;
+
+    do{
+        pedirProducto();
+        seguirComprando = confirm("Desea seguir comprando?");
+    }while(seguirComprando);
+
+    console.log(`Terminaste con tus compras el gasto total fue: $${puntoEnMiles(gastoTotal)}, quedaste con $${puntoEnMiles(presupuestoTotal)}`)
+
+}
+
+const pedirProducto = ()=>{
+
     let producto;
+    let esProductoValido;
+    do{
+        producto =  prompt("Elige el producto: PC o Notebook o Componente");
 
-    while(seguirComprando){
+        producto = producto !== null ? producto.toUpperCase() : null;
 
-     producto = parseInt(prompt("Ingrese su Producto \nPC 1: $250.000\nPC 2: $109.000\nPC 3: $300.000"));
-    
-     switch(producto){
-
-        case 1:
-            if(presupuesto >= PRIMERPC){
-                presupuesto -= PRIMERPC;
-                consumo += PRIMERPC;
-            }
-            else{
-                console.log("Saldo insuficiente para comprar la primer PC");
-                return;
-            }
-            break;
-
-        case 2:
-            if(presupuesto >= SEGUNDAPC){
-                presupuesto -= SEGUNDAPC;
-                consumo += SEGUNDAPC;
-            }
-            else{
-                console.log("Saldo insuficiente para comprar la Segunda PC");
-                return;
-            }
-            break;
-
-        case 3:
-            if(presupuesto >= TERCERAPC){
-                presupuesto -= TERCERAPC;
-                consumo += TERCERAPC;
-            }
-            else{
-                console.log("Saldo insuficiente para Tercera PC");
-                return;
-            }
-            break;
-
-            default: console.log("PC inexistente");
-     }
-     seguirComprando = confirm(`¿Desea seguir comprando? PRESUPUESTO: $${presupuesto}`);
-    } 
-}
-
-function terminarCompra(){
-
-    comprarPC()
-    if(consumo>0){
-        console.log(`Felicidades ${nombre} tus compras fueron realizadas y quedaste con un presupuesto de $${presupuesto}, gastaste $${consumo}`);
+        esProductoValido = producto=="PC" || producto=="NOTEBOOK" || producto=="COMPONENTE";
     }
-    else{
-        console.log("No compraste nada");
+    while(!esProductoValido || esProductoValido==null)
+
+    const productosFiltrados = productos.filter(pr => pr.tipo.toUpperCase() === producto);
+    const nombreProductos = productosFiltrados.map((pr, id) => `${id+1}. ${pr.nombre} $${puntoEnMiles(pr.precio)}`);
+
+    const productosAMostrar = nombreProductos.join(" \n");
+
+    let productoElegido = parseInt(prompt(`Elige segun el número. Presupuesto: $${puntoEnMiles(presupuestoTotal)}\n${productosAMostrar}`));
+
+    // Si el producto es mayor a 0 y la posicion es distinto a undefined
+    if(productoElegido > 0 && productosFiltrados.at(productoElegido-1) != undefined){
+        ejecutarCompraCon(productosFiltrados.at(productoElegido-1));
+    }else{
+        console.log("No existe ese articulo, compra cancelada");
     }
 }
 
-terminarCompra();
+  
 
+const  ejecutarCompraCon = (producto)=>{
 
+    if(presupuestoTotal >= producto.precio){
+        presupuestoTotal -= producto.precio;
+        gastoTotal += producto.precio;
+        console.log(`Felicidades compraste ${producto.nombre} quedaste con $${puntoEnMiles(presupuestoTotal)}`);
+    }else{
+        console.log("Dinero insuficiente ese articulo cuesta $" + puntoEnMiles(producto.precio));
+    }
+}
 
+const puntoEnMiles = (num) => new Intl.NumberFormat('de-DE').format(num);
 
+elegirProductos();
