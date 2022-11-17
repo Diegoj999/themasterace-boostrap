@@ -1,73 +1,157 @@
-let productos = [
-    {nombre: "PC GAMER Ryzen 7 RTX 3060Ti", precio: 299999, tipo: "PC"},
-    {nombre: "Notebook ASUS i7 16GB RAM RTX 2060", precio: 149999, tipo:"notebook"},
-    {nombre: "Placa de video RTX 3070ti 10GB", precio: 169999, tipo: "componente" },
-    {nombre: "Placa de video RTX 3060ti 8GB", precio: 129999, tipo: "componente" },
-    {nombre: "Placa de video RTX 3080ti 12GB", precio: 299999, tipo: "componente" },
-    {nombre: "Disco sólido interno WD 500GB", precio: 12000, tipo: "componente" }, 
-    {nombre: "Notebook Gamer ASUS AMD Ryzen 6800H 16 GB RTX 3060", precio: 500000, tipo: "notebook" }
+const contenedor = document.getElementById("contenedor");
+const cartButton = document.querySelector(".formExtra__numProduct");
 
+let carrito;
+
+document.addEventListener("DOMContentLoaded", () => {
+   let storageCarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
+   carrito = storageCarrito != null ? storageCarrito : [];
+   cargarProductos();
+})
+
+const productos = [{
+      id: 1,
+      nombre: "Pc Armada Gamer Amd Ryzen 7 5700g Ram 32gb RTX 3050",
+      img: "/assets/images/pc.webp",
+      precio: 299999,
+      desc: "PC AMD Ryzen 7",
+      tipo: "pc"
+   },
+   {
+      id: 2,
+      nombre: "Notebook ASUS 15,6' FHD Core I3 8GB SSD 256GB Windows 11",
+      img: "/assets/images/notebook.webp",
+      precio: 140000,
+      desc: "Notebook ASUS Core i3",
+      tipo: "notebook"
+   },
+   {
+      id: 3,
+      nombre: "Placa de video Nvidia Gigabyte GeForce GTX 1660 SUPER",
+      img: "/assets/images/componente1.webp",
+      precio: 80000,
+      desc: "Placa GTX 1660 SUPER",
+      tipo: "componente"
+   },
+   {
+      id: 4,
+      nombre: "Pc Completa Intel I5 9na 16gb Ddr4 Hd 1tb Gtx 1650 4gb",
+      img: "/assets/images/pc.webp",
+      precio: 230000,
+      desc: "PC INTEL",
+      tipo: "pc"
+   },
+   {
+      id: 5,
+      nombre: "Apple Macbook Air 13 pulgadas Nvme 2.0 512GB 8GB RAM ",
+      img: "/assets/images/notebook2.webp",
+      precio: 400000,
+      desc: "Macbook Air 512GB 8GB RAM",
+      tipo: "notebook"
+   },
+   {
+      id: 6,
+      nombre: "Placa de video Nvidia Gigabyte GeForce RTX 3060Ti 8GB",
+      img: "/assets/images/componente2.webp",
+      precio: 180000,
+      desc: "Placa RTX 3060Ti",
+      tipo: "componente"
+   },
+   {
+      id: 7,
+      nombre: "Pc Intel Core i5-11600K 16GB DDR4 RTX3060 12GB 500GB",
+      img: "/assets/images/pc2.jpg",
+      precio: 500000,
+      desc: "PC Intel Core i5 RTX3060",
+      tipo: "pc"
+   },
+   {
+      id: 8,
+      nombre: "Notebook HP AMD Ryzen 7 5700u 12gb 256GB SSD 15.6'",
+      img: "/assets/images/notebook3.webp",
+      precio: 210000,
+      desc: "Notebook HP",
+      tipo: "notebook"
+   },
+   {
+      id: 9,
+      nombre: "Placa de video Zotac Nvidia Gigabyte RTX3080Ti 12GB",
+      img: "/assets/images/componente3.webp",
+      precio: 235000,
+      desc: "Placa RTX 3080Ti",
+      tipo: "componente"
+   },
 ]
 
-let presupuestoTotal = parseInt(prompt("¿Cual es tu presupuesto?"));
-let gastoTotal = 0;
-presupuestoTotal = Number.isNaN(presupuestoTotal) ? 0 : presupuestoTotal;  
+const cargarProductos = () => {
 
+   contenedor.innerHTML = "";
+   const clasesDeContenedor = contenedor.classList
+   const categoria = clasesDeContenedor[clasesDeContenedor.length - 1];
 
-const elegirProductos = () =>{
- 
-    let seguirComprando;
+   // Si la categoria es distinta a la clase todos, filtramos por categoria si no mandamos todos
+   let productosFiltrados = categoria != "todos" ? productos.filter(pr => pr.tipo == categoria) : productos;
 
-    do{
-        pedirProducto();
-        seguirComprando = confirm("Desea seguir comprando?");
-    }while(seguirComprando);
+   productosFiltrados.forEach((pr) => {
 
-    console.log(`Terminaste con tus compras el gasto total fue: $${puntoEnMiles(gastoTotal)}, quedaste con $${puntoEnMiles(presupuestoTotal)}`)
+      const {
+         id,
+         nombre,
+         img,
+         precio,
+         desc,
+         tipo
+      } = pr;
+
+      let image = categoria != "todos" ? `..${img}` : `.${img}`; // Para ver la imagen en distinta URL
+
+      contenedor.innerHTML += `
+                <div class="col-sm-12 col-md-5 col-lg-5 col-xl-3">
+                     <div class="card productCard ${tipo}">
+                        <img src=${image} class="productCard__img" alt="${desc}" />
+                         <div class="card-body">
+                            <h5 class="fs-3 productCard__title">$${puntoEnMil(precio)}</h5>
+                            <p class="card-text productCard__info">${nombre}</p>
+                            <button id="${id}" class="btn btn-primary d-block mx-auto productCard__btn">Añadir al Carrito</button>
+                         </div>
+                      </div>
+                   </div>
+        `
+   })
+   actualizarContenido()
+}
+
+const actualizarContenido = () => {
+
+   cartButton.innerText = carrito.length;
+
+   const productCart = document.querySelectorAll(".productCard__btn");
+
+   productCart.forEach(pr =>
+      pr.addEventListener("click", (e) => {
+         agregarAlCarrito(e.currentTarget.id);
+      }))
 
 }
 
-const pedirProducto = ()=>{
+const agregarAlCarrito = idBoton => {
 
-    let producto;
-    let esProductoValido;
-    do{
-        producto =  prompt("Elige el producto: PC o Notebook o Componente");
+   const idB = parseInt(idBoton);
+   const producto = productos.find(producto => producto.id === idB);
 
-        producto = producto !== null ? producto.toUpperCase() : null;
+   if (carrito.some(pr => pr.id === idB)) {
+      const index = carrito.findIndex(pr => pr.id === idB);
+      carrito[index].cantidad++;
+   } else {
+      producto.cantidad = 1;
+      carrito.push(producto);
 
-        esProductoValido = producto=="PC" || producto=="NOTEBOOK" || producto=="COMPONENTE";
-    }
-    while(!esProductoValido)
+   }
+   //Plugin de notificacion
+   new Notify('Añadiste un articulo', `Añadido ${producto.nombre} al carrito`, 'success');
+   cartButton.innerText = carrito.length;
 
-    const productosFiltrados = productos.filter(pr => pr.tipo.toUpperCase() === producto);
-    const nombreProductos = productosFiltrados.map((pr, id) => `${id+1}. ${pr.nombre} $${puntoEnMiles(pr.precio)}`);
-
-    const productosAMostrar = nombreProductos.join(" \n");
-
-    let productoElegido = parseInt(prompt(`Elige segun el número. Presupuesto: $${puntoEnMiles(presupuestoTotal)}\n${productosAMostrar}`));
-
-    // Si el producto es mayor a 0 y la posicion es distinto a undefined
-    if(productoElegido > 0 && productosFiltrados.at(productoElegido-1) != undefined){
-        ejecutarCompraCon(productosFiltrados.at(productoElegido-1));
-    }else{
-        console.log("No existe ese articulo, compra cancelada");
-    }
+   localStorage.setItem("productos-en-carrito", JSON.stringify(carrito));
 }
 
-  
-
-const  ejecutarCompraCon = (producto)=>{
-
-    if(presupuestoTotal >= producto.precio){
-        presupuestoTotal -= producto.precio;
-        gastoTotal += producto.precio;
-        console.log(`Felicidades compraste ${producto.nombre} quedaste con $${puntoEnMiles(presupuestoTotal)}`);
-    }else{
-        console.log("Dinero insuficiente ese articulo cuesta $" + puntoEnMiles(producto.precio));
-    }
-}
-
-const puntoEnMiles = (num) => new Intl.NumberFormat('de-DE').format(num);
-
-elegirProductos();
+const puntoEnMil = (number) => new Intl.NumberFormat('de-DE').format(number);

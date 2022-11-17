@@ -16,6 +16,8 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed&display=swap" rel="stylesheet" />
 
+      <link rel="stylesheet" href="./css/notify.css" />
+
       <link rel="icon" type="image/icon" href="./assets/images/pc-icon.ico" />
       <link rel="stylesheet" href="./css/styles.css" />
 
@@ -139,78 +141,16 @@
          </div>
 
          <div class="container bg-dark principalTitle">
-            <h4>Productos Destacados</h4>
+            <h4>TODOS LOS PRODUCTOS</h4>
          </div>
 
          <div class="container products">
-            <div class="row gap-5 justify-content-between ">
-               <div class="col-sm-12 col-md-5 col-lg-5 col-xl-3">
-                  <div class="card productCard">
-                     <img src="./assets/images/pc.webp" class="productCard__img" alt="PC GAMER Ryzen 7" />
-                     <div class="card-body">
-                        <h5 class="fs-3 productCard__title">$299.999</h5>
-                        <p class="card-text productCard__info">Pc Armada Gamer Amd Ryzen 7 5700g Ram 32gb 960g Ssd Wifi</p>
-                        <button id="cartButton" class="btn btn-primary d-block mx-auto productCard__btn">Añadir al Carrito</button>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-sm-12 col-md-5 col-lg-5 col-xl-3">
-                  <div class="card productCard">
-                     <img src="./assets/images/notebook.webp" class="productCard__img" alt="Notebook ASUS" />
-                     <div class="card-body">
-                        <h5 class="fs-3 productCard__title">$109.999</h5>
-                        <p class="card-text productCard__info">Notebook ASUS X515EA 15,6" FHD Core I3 4GB SSD 256GB Windows 11</p>
-                        <button id="cartButton" class="btn btn-primary d-block mx-auto productCard__btn">Añadir al Carrito</button>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-sm-12 col-md-5 col-lg-5 col-xl-3">
-                  <div class="card productCard">
-                     <img src="./assets/images/componente1.webp" class="productCard__img" alt="Placa GTX 1660 SUPER" />
-                     <div class="card-body">
-                        <h5 class="fs-3 productCard__title">$80.000</h5>
-                        <p class="card-text productCard__info">Placa de video Nvidia Gigabyte GeForce GTX 1660 SUPER</p>
-                        <button id="cartButton" class="btn btn-primary d-block mx-auto productCard__btn">Añadir al Carrito</button>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-sm-12 col-md-5 col-lg-5 col-xl-3">
-                  <div class="card productCard">
-                     <img src="./assets/images/pc.webp" class="productCard__img" alt="PC GAMER Ryzen 7" />
-                     <div class="card-body">
-                        <h5 class="fs-3 productCard__title">$299.999</h5>
-                        <p class="card-text productCard__info">Pc Armada Gamer Amd Ryzen 7 5700g Ram 32gb 960g Ssd Wifi</p>
-                        <button id="cartButton" class="btn btn-primary d-block mx-auto productCard__btn">Añadir al Carrito</button>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-sm-12 col-md-5 col-lg-5 col-xl-3">
-                  <div class="card productCard">
-                     <img src="./assets/images/notebook.webp" class="productCard__img" alt="Notebook ASUS" />
-                     <div class="card-body">
-                        <h5 class="fs-3 productCard__title">$109.999</h5>
-                        <p class="card-text productCard__info">Notebook ASUS X515EA 15,6" FHD Core I3 4GB SSD 256GB Windows 11</p>
-                        <button id="cartButton" class="btn btn-primary d-block mx-auto productCard__btn">Añadir al Carrito</button>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-sm-12 col-md-5 col-lg-5 col-xl-3">
-                  <div class="card productCard">
-                     <img src="./assets/images/componente1.webp" class="productCard__img" alt="Placa GTX 1660 SUPER" />
-                     <div class="card-body">
-                        <h5 class="fs-3 productCard__title">$80.000</h5>
-                        <p class="card-text productCard__info">Placa de video Nvidia Gigabyte GeForce GTX 1660 SUPER</p>
-                        <button id="cartButton" class="btn btn-primary d-block mx-auto productCard__btn">Añadir al Carrito</button>
-                     </div>
-                  </div>
-               </div>
+            <div id="contenedor" class="row gap-5 justify-content-between todos">
+               
             </div>
          </div>
+
+         
  
          <div class="container bg-dark principalTitle">
             <h4>Personalizaciones</h4>
@@ -310,6 +250,9 @@
       <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="./js/notify.js"></script>
 
       <script src="./js/app.js"></script>
 
