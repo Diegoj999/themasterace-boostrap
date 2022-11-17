@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const productos = [{
       id: 1,
-      nombre: "Pc Armada Gamer Amd Ryzen 7 5700g Ram 32gb RTX 3050",
+      nombre: "Pc Armada Amd Ryzen 7 5700g Ram 32gb RTX 3050 8GB",
       img: "/assets/images/pc.webp",
       precio: 299999,
       desc: "PC AMD Ryzen 7",
@@ -19,7 +19,7 @@ const productos = [{
    },
    {
       id: 2,
-      nombre: "Notebook ASUS 15,6' FHD Core I3 8GB SSD 256GB Windows 11",
+      nombre: "Notebook ASUS 15,6' FHD Core I3 1165g4 8GB SSD 256GB",
       img: "/assets/images/notebook.webp",
       precio: 140000,
       desc: "Notebook ASUS Core i3",
