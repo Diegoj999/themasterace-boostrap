@@ -126,12 +126,3 @@ botonComprar.addEventListener("click", ()=>{
           })
     });
 
-
-const modificarTextoCon = (text, l) =>{
-   let rellenarTexto = text;
-   for(let i = rellenarTexto.length; i<l;i++){
-      rellenarTexto = rellenarTexto.concat(" ");
-   }
-   let arreglarTexto = text.length > l ? text.slice(0, l) : rellenarTexto;
-   return arreglarTexto;
-}

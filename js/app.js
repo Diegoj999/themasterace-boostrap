@@ -3,12 +3,6 @@ const cartButton = document.querySelector(".formExtra__numProduct");
 
 let carrito;
 
-document.addEventListener("DOMContentLoaded", () => {
-   let storageCarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
-   carrito = storageCarrito != null ? storageCarrito : [];
-   cargarProductos();
-})
-
 const productos = [{
       id: 1,
       nombre: "Pc Armada Amd Ryzen 7 5700g Ram 32gb RTX 3050 8GB",
@@ -82,6 +76,12 @@ const productos = [{
       tipo: "componente"
    },
 ]
+
+document.addEventListener("DOMContentLoaded", () => {
+   let storageCarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
+   carrito = storageCarrito != null ? storageCarrito : [];
+   cargarProductos();
+})
 
 const cargarProductos = () => {
 
