@@ -50,6 +50,16 @@ body {
   background-position-x: 10px;
   background-color: #4e4a4a; }
 
+.bSearch {
+  color: white;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s;
+  margin-top: 2px; }
+
+.bSearch:hover {
+  color: #0d6efd; }
+
 .footer {
   width: 100%;
   color: white;

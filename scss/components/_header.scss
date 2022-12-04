@@ -44,3 +44,15 @@
         background-color: $secondary; 
     }
 }
+
+.bSearch{
+    color: white; 
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s;
+    margin-top: 2px;
+}
+
+.bSearch:hover{
+    color: $primary
+}

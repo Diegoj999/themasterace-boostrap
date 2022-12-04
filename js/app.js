@@ -3,87 +3,30 @@ const cartButton = document.querySelector(".formExtra__numProduct");
 
 let carrito;
 
-const productos = [{
-      id: 1,
-      nombre: "Pc Armada Amd Ryzen 7 5700g Ram 32gb RTX 3050 8GB",
-      img: "/assets/images/pc.webp",
-      precio: 299999,
-      desc: "PC AMD Ryzen 7",
-      tipo: "pc"
-   },
-   {
-      id: 2,
-      nombre: "Notebook ASUS 15,6' FHD Core I3 1165g4 8GB SSD 256GB",
-      img: "/assets/images/notebook.webp",
-      precio: 140000,
-      desc: "Notebook ASUS Core i3",
-      tipo: "notebook"
-   },
-   {
-      id: 3,
-      nombre: "Placa de video Nvidia Gigabyte GeForce GTX 1660 SUPER",
-      img: "/assets/images/componente1.webp",
-      precio: 80000,
-      desc: "Placa GTX 1660 SUPER",
-      tipo: "componente"
-   },
-   {
-      id: 4,
-      nombre: "Pc Completa Intel I5 9na 16gb Ddr4 Hd 1tb Gtx 1650 4gb",
-      img: "/assets/images/pc.webp",
-      precio: 230000,
-      desc: "PC INTEL",
-      tipo: "pc"
-   },
-   {
-      id: 5,
-      nombre: "Apple Macbook Air 13 pulgadas Nvme 2.0 512GB 8GB RAM ",
-      img: "/assets/images/notebook2.webp",
-      precio: 400000,
-      desc: "Macbook Air 512GB 8GB RAM",
-      tipo: "notebook"
-   },
-   {
-      id: 6,
-      nombre: "Placa de video Nvidia Gigabyte GeForce RTX 3060Ti 8GB",
-      img: "/assets/images/componente2.webp",
-      precio: 180000,
-      desc: "Placa RTX 3060Ti",
-      tipo: "componente"
-   },
-   {
-      id: 7,
-      nombre: "Pc Intel Core i5-11600K 16GB DDR4 RTX3060 12GB 500GB",
-      img: "/assets/images/pc2.jpg",
-      precio: 500000,
-      desc: "PC Intel Core i5 RTX3060",
-      tipo: "pc"
-   },
-   {
-      id: 8,
-      nombre: "Notebook HP AMD Ryzen 7 5700u 12gb 256GB SSD 15.6'",
-      img: "/assets/images/notebook3.webp",
-      precio: 210000,
-      desc: "Notebook HP",
-      tipo: "notebook"
-   },
-   {
-      id: 9,
-      nombre: "Placa de video Zotac Nvidia Gigabyte RTX3080Ti 12GB",
-      img: "/assets/images/componente3.webp",
-      precio: 235000,
-      desc: "Placa RTX 3080Ti",
-      tipo: "componente"
-   },
-]
-
 document.addEventListener("DOMContentLoaded", () => {
-   let storageCarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
+   fetchData();
+   let storageCarrito = JSON.parse(localStorage.getItem("productos-carrito"));
    carrito = storageCarrito != null ? storageCarrito : [];
-   cargarProductos();
+
 })
 
-const cargarProductos = () => {
+const fetchData = async () =>{
+   try{
+      const clasesDeContenedor = contenedor.classList
+      const categoria = clasesDeContenedor[clasesDeContenedor.length - 1];
+
+      const api =  categoria != "todos" ? '../api.json' : 'api.json';
+       const res = await fetch(api);
+       const data = await res.json();
+ 
+       cargarProductos(data);
+   }
+   catch(error){
+       console.log(error)
+   }
+}
+
+const cargarProductos = (productos) => {
 
    contenedor.innerHTML = "";
    const clasesDeContenedor = contenedor.classList
@@ -118,10 +61,10 @@ const cargarProductos = () => {
                    </div>
         `
    })
-   actualizarContenido()
+   actualizarContenidoEn(productos)
 }
 
-const actualizarContenido = () => {
+const actualizarContenidoEn = (productos) => {
 
    cartButton.innerText = carrito.length;
 
@@ -129,12 +72,12 @@ const actualizarContenido = () => {
 
    productCart.forEach(pr =>
       pr.addEventListener("click", (e) => {
-         agregarAlCarrito(e.currentTarget.id);
+         agregarAlCarritoA(e.currentTarget.id, productos);
       }))
 
 }
 
-const agregarAlCarrito = idBoton => {
+const agregarAlCarritoA = (idBoton, productos) => {
 
    const idB = parseInt(idBoton);
    const producto = productos.find(producto => producto.id === idB);
@@ -151,7 +94,13 @@ const agregarAlCarrito = idBoton => {
    new Notify('Añadiste un articulo', `Añadido ${producto.nombre} al carrito`, 'success');
    cartButton.innerText = carrito.length;
 
-   localStorage.setItem("productos-en-carrito", JSON.stringify(carrito));
+   localStorage.setItem("productos-carrito", JSON.stringify(carrito));
 }
 
 const puntoEnMil = (number) => new Intl.NumberFormat('de-DE').format(number);
+
+
+
+
+
+

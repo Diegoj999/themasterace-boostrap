@@ -4,9 +4,11 @@ const botonVaciar = document.querySelector(".carrito__acciones__vaciar")
 const cartButton = document.querySelector(".formExtra__numProduct");
 const contenedorCarritoProductos = document.querySelector(".carrito__productos");
 const botonComprar = document.querySelector(".carrito__acciones__comprar");
+const contenedor = document.querySelector("#modal-container")
+const contenedorAcciones = document.querySelector(".carrito__acciones");
 
 document.addEventListener("DOMContentLoaded", () =>{
-    let storageCarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
+    let storageCarrito = JSON.parse(localStorage.getItem("productos-carrito"));
     carrito = storageCarrito != null ? storageCarrito : [];
     actualizarCarrito();
 })
@@ -65,7 +67,7 @@ const actualizarCarrito = () => {
 
 botonVaciar.addEventListener("click", () => {
    carrito.length = 0;
-   localStorage.setItem("productos-en-carrito", JSON.stringify(carrito));
+   localStorage.setItem("productos-carrito", JSON.stringify(carrito));
    actualizarCarrito();
 });
 
@@ -76,8 +78,6 @@ const actualizarContenido = () => {
    actualizarBotonAcciones();
 
 }
-
-const contenedorAcciones = document.querySelector(".carrito__acciones");
 
 const actualizarBotonAcciones = () =>{
     if(carrito.length > 0){
@@ -93,8 +93,6 @@ const actualizarTotal = () => {
    contenedorTotal.innerText = `$${puntoEnMil(totalCalculado)}`;
 }
 
-const puntoEnMil = (number) => new Intl.NumberFormat('de-DE').format(number);
-
 const actualizarBotonesEliminar = () => {
    botonesEliminar = document.querySelectorAll(".carrito__producto__eliminar");
 
@@ -106,7 +104,7 @@ const actualizarBotonesEliminar = () => {
          carrito.splice(index, 1);
          actualizarCarrito();
 
-         localStorage.setItem("productos-en-carrito", JSON.stringify(carrito));
+         localStorage.setItem("productos-carrito", JSON.stringify(carrito));
       });
    });
 }
@@ -114,7 +112,7 @@ const actualizarBotonesEliminar = () => {
 
 botonComprar.addEventListener("click", ()=>{
         carrito.length = 0;
-        localStorage.setItem("productos-en-carrito", JSON.stringify(carrito));
+        localStorage.setItem("productos-carrito", JSON.stringify(carrito));
         actualizarCarrito();
 
         Swal.fire({
