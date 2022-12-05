@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     let storageCarrito = JSON.parse(localStorage.getItem("productos-carrito"));
     carrito = storageCarrito != null ? storageCarrito : [];
+    actualizarNumerito(carrito)
  
  })
-
 
 bSearch.addEventListener("focus", ()=>{
    bSearch.dataset.bsTarget = "#exampleModal";
@@ -37,9 +37,7 @@ btnModal.addEventListener("click", (e)=>{
     else{
        modalContainer.innerHTML = "Caracteres invalidos";
     }
-    
  })
-
 
 const fetchDataSearch = async () =>{
     try{
@@ -111,7 +109,3 @@ function productosSearch(string, productos){
    }
    actualizarContenidoEn(productos)
 }
-
- 
-
-

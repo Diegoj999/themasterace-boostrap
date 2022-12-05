@@ -72,12 +72,12 @@ botonVaciar.addEventListener("click", () => {
 });
 
 const actualizarContenido = () => {
-   cartButton.innerText = carrito.length;
    actualizarTotal()
    actualizarBotonesEliminar();
    actualizarBotonAcciones();
 
 }
+
 
 const actualizarBotonAcciones = () =>{
     if(carrito.length > 0){
