@@ -26,7 +26,7 @@ const agregarAlCarritoA = (idBoton, productos) => {
     }
     //Plugin de notificacion
     new Notify('Añadiste un articulo', `Añadido ${producto.nombre} al carrito`, 'success');
-    cartButton.innerText = carrito.length;
+    actualizarNumerito(carrito)
     
     localStorage.setItem("productos-carrito", JSON.stringify(carrito));
 }
