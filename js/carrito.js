@@ -108,7 +108,7 @@ const actualizarBotonesEliminar = () => {
       });
    });
 }
-
+ 
 
 botonComprar.addEventListener("click", ()=>{
         carrito.length = 0;

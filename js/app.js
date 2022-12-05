@@ -98,9 +98,3 @@ const agregarAlCarritoA = (idBoton, productos) => {
 }
 
 const puntoEnMil = (number) => new Intl.NumberFormat('de-DE').format(number);
-
-
-
-
-
-

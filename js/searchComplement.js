@@ -9,7 +9,7 @@ const actualizarContenidoEn = (productos) => {
           agregarAlCarritoA(e.currentTarget.id, productos);
        }))
     
-    }
+}
     
 const agregarAlCarritoA = (idBoton, productos) => {
     
@@ -29,6 +29,6 @@ const agregarAlCarritoA = (idBoton, productos) => {
     cartButton.innerText = carrito.length;
     
     localStorage.setItem("productos-carrito", JSON.stringify(carrito));
-    }
+}
     
 const puntoEnMil = (number) => new Intl.NumberFormat('de-DE').format(number);

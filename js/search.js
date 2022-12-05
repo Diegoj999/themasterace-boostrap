@@ -74,10 +74,8 @@ function productosSearch(string, productos){
       const clasesDeContenedor = modalContainer.classList
       const categoria = clasesDeContenedor[clasesDeContenedor.length - 1];
       spinnerModal.style.display = "none"
-      console.log(categoria)
 
       let productosFiltrados = string =! "" ? productos.filter(pr => pr.nombre.toUpperCase().includes(string.toUpperCase())) : productos
-      console.log(productosFiltrados)
 
       productosFiltrados.forEach((pr) => {
 
