@@ -66,7 +66,7 @@ const cargarProductos = (productos) => {
 
 const actualizarContenidoEn = (productos) => {
 
-   actualizarNumerito(carrito);
+   actualizarNumerito();
    const productCart = document.querySelectorAll(".productCard__btn");
 
    productCart.forEach(pr =>
@@ -92,13 +92,13 @@ const agregarAlCarritoA = (idBoton, productos) => {
    }
    //Plugin de notificacion
    new Notify('Añadiste un articulo', `Añadido ${producto.nombre} al carrito`, 'success');
-   actualizarNumerito(carrito);
+   actualizarNumerito();
 
    localStorage.setItem("productos-carrito", JSON.stringify(carrito));
 }
 
-const  actualizarNumerito = (productos)=> {
-   let nuevoNumerito = productos.reduce((acc, producto) => acc + producto.cantidad, 0);
+const  actualizarNumerito = ()=> {
+   let nuevoNumerito = carrito.reduce((acc, producto) => acc + producto.cantidad, 0);
    cartButton.innerText = nuevoNumerito;
 }
 

@@ -103,7 +103,7 @@ const actualizarBotonesEliminar = () => {
 
          carrito.splice(index, 1);
          actualizarCarrito();
-         actualizarNumerito(carrito)
+         actualizarNumerito()
 
          localStorage.setItem("productos-carrito", JSON.stringify(carrito));
       });
@@ -115,7 +115,7 @@ botonComprar.addEventListener("click", ()=>{
         carrito.length = 0;
         localStorage.setItem("productos-carrito", JSON.stringify(carrito));
         actualizarCarrito();
-        actualizarNumerito(carrito)
+        actualizarNumerito()
    
       
 

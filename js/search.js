@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     let storageCarrito = JSON.parse(localStorage.getItem("productos-carrito"));
     carrito = storageCarrito != null ? storageCarrito : [];
-    actualizarNumerito(carrito)
+    actualizarNumerito()
  
  })
 

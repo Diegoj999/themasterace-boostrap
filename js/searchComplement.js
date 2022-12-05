@@ -1,6 +1,6 @@
 const actualizarContenidoEn = (productos) => {
 
-   actualizarNumerito(carrito);
+   actualizarNumerito();
     
     const productCart = document.querySelectorAll(".productCard__btn");
     
@@ -33,7 +33,7 @@ const agregarAlCarritoA = (idBoton, productos) => {
     
 const puntoEnMil = (number) => new Intl.NumberFormat('de-DE').format(number);
 
-const  actualizarNumerito = (productos)=> {
-   let nuevoNumerito = productos.reduce((acc, producto) => acc + producto.cantidad, 0);
+const  actualizarNumerito = ()=> {
+   let nuevoNumerito = carrito.reduce((acc, producto) => acc + producto.cantidad, 0);
    cartButton.innerText = nuevoNumerito;
 }
